@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A AI Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Q&A AI Agent</h1>
+
+        <section class="upload-section">
+            <h2>1. Upload Document (PDF)</h2>
+            <input type="file" id="pdfUpload" accept=".pdf">
+            <button id="uploadBtn">Upload and Process</button>
+            <div id="uploadStatus" class="status"></div>
+            <div id="documentIdDisplay" class="info"></div>
+        </section>
+
+        <section class="qa-section">
+            <h2>2. Ask a Question</h2>
+            <p>Document ID: <span id="currentDocumentId">N/A</span></p>
+            <input type="text" id="questionInput" placeholder="e.g., What is the conclusion of the paper?">
+            <button id="askQuestionBtn">Ask Question</button>
+            <div id="answerDisplay" class="response"></div>
+        </section>
+
+        <section class="summarize-section">
+            <h2>3. Summarize Document/Section</h2>
+            <p>Document ID: <span id="currentDocumentId2">N/A</span></p>
+            <input type="text" id="summarizeSectionInput" placeholder="Optional: Enter section title (e.g., Methodology)">
+            <select id="summarizeGranularity">
+                <option value="overview">Overview</option>
+                <option value="methodology">Methodology</option>
+                <option value="conclusion">Conclusion</option>
+                <option value="results">Results</option>
+            </select>
+            <button id="summarizeBtn">Summarize</button>
+            <div id="summaryDisplay" class="response"></div>
+        </section>
+
+        <section class="extract-section">
+            <h2>4. Extract Specific Data</h2>
+            <p>Document ID: <span id="currentDocumentId3">N/A</span></p>
+            <input type="text" id="extractQueryInput" placeholder="e.g., accuracy and F1-score">
+            <button id="extractBtn">Extract Data</button>
+            <div id="extractionDisplay" class="response"></div>
+        </section>
+
+        <section class="arxiv-section">
+            <h2>5. (Bonus) Arxiv Paper Lookup</h2>
+            <input type="text" id="arxivQueryInput" placeholder="e.g., large language models and ethics">
+            <input type="number" id="arxivMaxResults" value="5" min="1" max="10">
+            <button id="arxivSearchBtn">Search Arxiv</button>
+            <div id="arxivResultsDisplay" class="response"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
