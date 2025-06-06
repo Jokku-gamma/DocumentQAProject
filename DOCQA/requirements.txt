@@ -1,0 +1,7 @@
+fastapi[all]
+uvicorn
+python-dotenv
+google-generativeai
+pydantic
+arxiv # For Arxiv API interaction
+python-magic # For robust file type checking
